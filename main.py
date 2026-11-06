@@ -30,16 +30,17 @@ def senha_foco_saiu(event):
 
 # Instância a janela principal
 janela = tk.Tk()
-janela.title("Minha Aplicação")
-janela.geometry("1920x1080")
+janela.title("Tela de Login")
+janela.geometry("1080x720")
+janela.config(bg="white")
 
 # Frame Container para manter tudo centralizado junto
-container = tk.Frame(janela)
+container = tk.Frame(janela, bg="white")
 container.place(relx=0.5, rely=0.5, anchor="center")
 
 # Imagem logo
 imagem_logo = tk.PhotoImage(file="images/logo tkinter.png")
-rotulo_logo = tk.Label(container, image=imagem_logo)
+rotulo_logo = tk.Label(container, bg="white", image=imagem_logo)
 rotulo_logo.pack(pady=(0, 20))  # Espaçamento inferior após o logo
 
 # Caixas de texto (com parâmetros e funções placeholder)
@@ -49,8 +50,8 @@ entrada_email = tk.Entry(
     width=32,
     font=("Arial", 12),
     bg="#eaeaea",
-    bd=1,
-    relief="solid",
+    bd=0,
+    relief="raised",
     fg="gray"
     )
 entrada_email.insert(0, "e-mail")
@@ -63,8 +64,8 @@ entrada_senha = tk.Entry(
     width=32,
     font=("Arial", 12),
     bg="#eaeaea",
-    bd=1,
-    relief="solid",
+    bd=0,
+    relief="raised",
     fg="gray"
     )
 entrada_senha.insert(0, "senha")
@@ -80,6 +81,7 @@ botao_acessar = tk.Button(
     width=34,
     font=("Arial", 10, "bold"),
     bd=0,
+    relief="raised",
     cursor="hand2"
     )
 botao_acessar.pack(pady=(15, 20), ipady=8)
@@ -88,6 +90,8 @@ botao_acessar.pack(pady=(15, 20), ipady=8)
 
 link_primeiro_acesso = tk.Label(
     container,
+    bg="white",
+    fg="black",
     text="PRIMEIRO ACESSO",
     font=("Arial", 9, "bold"),
     cursor="hand2"
