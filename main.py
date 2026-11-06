@@ -28,7 +28,7 @@ def senha_foco_saiu(event):
         )  # Exibe o texto "senha" sem ocultar
         entrada_senha.insert(0, "senha")
 
-# 1. Instância a janela principal
+# Instância a janela principal
 janela = tk.Tk()
 janela.title("Minha Aplicação")
 janela.geometry("1920x1080")
@@ -37,12 +37,12 @@ janela.geometry("1920x1080")
 container = tk.Frame(janela)
 container.place(relx=0.5, rely=0.5, anchor="center")
 
-# 1. Imagem logo
+# Imagem logo
 imagem_logo = tk.PhotoImage(file="images/logo tkinter.png")
 rotulo_logo = tk.Label(container, image=imagem_logo)
 rotulo_logo.pack(pady=(0, 20))  # Espaçamento inferior após o logo
 
-# 4. Caixas de texto (com parâmetros e funções placeholder)
+# Caixas de texto (com parâmetros e funções placeholder)
 
 entrada_email = tk.Entry(container, width=25, fg="gray")
 entrada_email.insert(0, "e-mail")
@@ -55,6 +55,11 @@ entrada_senha.insert(0, "senha")
 entrada_senha.bind("<FocusIn>", senha_foco_entrou)
 entrada_senha.bind("<FocusOut>", senha_foco_saiu)
 entrada_senha.pack(pady=8, ipady=8)
+
+# Botão acessar
+
+botao_acessar = tk.Button(container, text="Acessar", width=25)
+botao_acessar.pack(pady=8, ipady=8)
 
 # Puxando a função janela
 
