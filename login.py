@@ -5,7 +5,7 @@ import tkinter as tk
 def email_foco_entrou(event):
     if entrada_email.get() == "e-mail":
         entrada_email.delete(0, tk.END)
-        entrada_email.config(fg="white")
+        entrada_email.config(fg="black")
 
 
 def email_foco_saiu(event):
@@ -17,7 +17,7 @@ def senha_foco_entrou(event):
     if entrada_senha.get() == "senha":
         entrada_senha.delete(0, tk.END)
         entrada_senha.config(
-            show="*", fg="white"
+            show="*", fg="black"
         )  # Oculta os caracteres ao digitar
 
 
@@ -82,7 +82,7 @@ botao_acessar = tk.Button(
     font=("Arial", 10, "bold"),
     bd=0,
     bg="#298FC2",
-    fg="white",
+    fg="black",
     relief="flat",
     cursor="hand2"
     )
