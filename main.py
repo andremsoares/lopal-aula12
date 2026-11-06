@@ -57,7 +57,14 @@ entrada_email.bind("<FocusIn>", email_foco_entrou)
 entrada_email.bind("<FocusOut>", email_foco_saiu)
 entrada_email.pack(pady=8, ipady=8)
 
-entrada_senha = tk.Entry(container, width=25, fg="gray")
+entrada_senha = tk.Entry(
+    container,
+    width=32,
+    font=("Arial", 12),
+    bg="#eaeaea",
+    bd=1,
+    relief="solid",
+    fg="gray"))
 entrada_senha.insert(0, "senha")
 entrada_senha.bind("<FocusIn>", senha_foco_entrou)
 entrada_senha.bind("<FocusOut>", senha_foco_saiu)
