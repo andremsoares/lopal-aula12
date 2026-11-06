@@ -44,7 +44,14 @@ rotulo_logo.pack(pady=(0, 20))  # Espaçamento inferior após o logo
 
 # Caixas de texto (com parâmetros e funções placeholder)
 
-entrada_email = tk.Entry(container, width=25, fg="gray")
+entrada_email = tk.Entry(
+    container,
+    width=32,
+    font=("Arial", 12),
+    bg="#eaeaea",
+    bd=1,
+    relief="solid",
+    fg="gray")
 entrada_email.insert(0, "e-mail")
 entrada_email.bind("<FocusIn>", email_foco_entrou)
 entrada_email.bind("<FocusOut>", email_foco_saiu)
