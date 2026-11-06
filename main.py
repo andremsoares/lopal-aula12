@@ -86,7 +86,12 @@ botao_acessar.pack(pady=(15, 20), ipady=8)
 
 # Link do primeiro acesso
 
-link_primeiro_acesso = tk.Label(container, text="PRIMEIRO ACESSO")
+link_primeiro_acesso = tk.Label(
+    container,
+    text="PRIMEIRO ACESSO",
+    font=("Arial", 9, "bold"),
+    cursor="hand2"
+    )
 link_primeiro_acesso.pack()
 
 # Puxando a função janela
