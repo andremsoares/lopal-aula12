@@ -58,8 +58,13 @@ entrada_senha.pack(pady=8, ipady=8)
 
 # Botão acessar
 
-botao_acessar = tk.Button(container, text="Acessar", width=25)
+botao_acessar = tk.Button(container, text="ACESSAR", width=25)
 botao_acessar.pack(pady=8, ipady=8)
+
+# Link do primeiro acesso
+
+link_primeiro_acesso = tk.Label(container, text="PRIMEIRO ACESSO")
+link_primeiro_acesso.pack()
 
 # Puxando a função janela
 
