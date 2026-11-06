@@ -51,7 +51,8 @@ entrada_email = tk.Entry(
     bg="#eaeaea",
     bd=1,
     relief="solid",
-    fg="gray")
+    fg="gray"
+    )
 entrada_email.insert(0, "e-mail")
 entrada_email.bind("<FocusIn>", email_foco_entrou)
 entrada_email.bind("<FocusOut>", email_foco_saiu)
@@ -64,7 +65,8 @@ entrada_senha = tk.Entry(
     bg="#eaeaea",
     bd=1,
     relief="solid",
-    fg="gray"))
+    fg="gray"
+    )
 entrada_senha.insert(0, "senha")
 entrada_senha.bind("<FocusIn>", senha_foco_entrou)
 entrada_senha.bind("<FocusOut>", senha_foco_saiu)
@@ -72,8 +74,15 @@ entrada_senha.pack(pady=8, ipady=8)
 
 # Botão acessar
 
-botao_acessar = tk.Button(container, text="ACESSAR", width=25)
-botao_acessar.pack(pady=8, ipady=8)
+botao_acessar = tk.Button(
+    container,
+    text="ACESSAR",
+    width=34,
+    font=("Arial", 10, "bold"),
+    bd=0,
+    cursor="hand2"
+    )
+botao_acessar.pack(pady=(15, 20), ipady=8)
 
 # Link do primeiro acesso
 
