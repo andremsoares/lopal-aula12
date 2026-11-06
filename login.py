@@ -81,7 +81,9 @@ botao_acessar = tk.Button(
     width=34,
     font=("Arial", 10, "bold"),
     bd=0,
-    relief="raised",
+    bg="#298FC2",
+    fg="white",
+    relief="flat",
     cursor="hand2"
     )
 botao_acessar.pack(pady=(15, 20), ipady=8)
