@@ -1,6 +1,61 @@
 import tkinter as tk
 
+# Funções para efeito de placeholder
+
+def email_foco_entrou(event):
+    if entrada_email.get() == "e-mail":
+        entrada_email.delete(0, tk.END)
+        entrada_email.config(fg="white")
+
+
+def email_foco_saiu(event):
+    if entrada_email.get() == "":
+        entrada_email.insert(0, "e-mail")
+        entrada_email.config(fg="gray")
+        
+def senha_foco_entrou(event):
+    if entrada_senha.get() == "senha":
+        entrada_senha.delete(0, tk.END)
+        entrada_senha.config(
+            show="*", fg="white"
+        )  # Oculta os caracteres ao digitar
+
+
+def senha_foco_saiu(event):
+    if entrada_senha.get() == "":
+        entrada_senha.config(
+            show="", fg="gray"
+        )  # Exibe o texto "senha" sem ocultar
+        entrada_senha.insert(0, "senha")
+
 # 1. Instância a janela principal
 janela = tk.Tk()
 janela.title("Minha Aplicação")
 janela.geometry("1920x1080")
+
+# Frame Container para manter tudo centralizado junto
+container = tk.Frame(janela)
+container.place(relx=0.5, rely=0.5, anchor="center")
+
+# 1. Imagem logo
+imagem_logo = tk.PhotoImage(file="images/logo tkinter.png")
+rotulo_logo = tk.Label(container, image=imagem_logo)
+rotulo_logo.pack(pady=(0, 20))  # Espaçamento inferior após o logo
+
+# 4. Caixas de texto (com parâmetros e funções placeholder)
+
+entrada_email = tk.Entry(container, width=25, fg="gray")
+entrada_email.insert(0, "e-mail")
+entrada_email.bind("<FocusIn>", email_foco_entrou)
+entrada_email.bind("<FocusOut>", email_foco_saiu)
+entrada_email.pack(pady=8, ipady=8)
+
+entrada_senha = tk.Entry(container, width=25, fg="gray")
+entrada_senha.insert(0, "senha")
+entrada_senha.bind("<FocusIn>", senha_foco_entrou)
+entrada_senha.bind("<FocusOut>", senha_foco_saiu)
+entrada_senha.pack(pady=8, ipady=8)
+
+# Puxando a função janela
+
+janela.mainloop()
